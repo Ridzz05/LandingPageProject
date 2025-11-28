@@ -3,25 +3,26 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Card from '../../components/Card';
+import { Lightbulb, BadgeCheck, Handshake, TrendingUp } from 'lucide-react';
 
 const values = [
   {
-    icon: "💡",
+    icon: <Lightbulb className="w-8 h-8" />,
     title: "Innovation",
     description: "We constantly push boundaries and explore new technologies to create better solutions."
   },
   {
-    icon: "🎯",
+    icon: <BadgeCheck className="w-8 h-8" />,
     title: "Quality",
     description: "We maintain high standards in everything we do, from code to user experience."
   },
   {
-    icon: "🤝",
+    icon: <Handshake className="w-8 h-8" />,
     title: "Community",
     description: "We believe in the power of community and collaborative development."
   },
   {
-    icon: "🔄",
+    icon: <TrendingUp className="w-8 h-8" />,
     title: "Growth",
     description: "We're committed to continuous learning and improvement."
   }
@@ -76,7 +77,9 @@ export function Values() {
             variants={cardVariants}
           >
             <Card className="h-full hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">{value.icon}</div>
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#442781]/10 text-[#442781] dark:bg-[#442781]/15 dark:text-[#a992db] mb-4">
+                {value.icon}
+              </div>
               <h3 className="font-raleway font-bold text-xl text-gray-800 dark:text-white mb-3">
                 {value.title}
               </h3>

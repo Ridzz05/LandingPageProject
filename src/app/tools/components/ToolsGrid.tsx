@@ -47,7 +47,9 @@ export function ToolsGrid({ tools }: ToolsGridProps) {
           variants={cardVariants}
         >
           <Card className="group hover:shadow-lg transition-shadow">
-            <div className="text-4xl mb-4">{tool.icon}</div>
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-[#442781]/10 text-[#442781] dark:bg-[#442781]/15 dark:text-[#a992db] mb-4">
+              {tool.icon}
+            </div>
             <h2 className="font-raleway font-bold text-xl text-gray-800 dark:text-white mb-4">
               {tool.title}
             </h2>

@@ -6,45 +6,46 @@ import { ToolsHeader } from './components/ToolsHeader';
 import { ToolsGrid } from './components/ToolsGrid';
 import { FeaturedTool } from './components/FeaturedTool';
 import type { Tool } from './types';
+import { Braces, Palette, FileText, Repeat2, Code2, Regex } from 'lucide-react';
 
 const tools: Tool[] = [
   {
-    icon: "⚡",
+    icon: <Braces className="w-7 h-7" />,
     title: "JSON Validator",
     description: "Validasi dan format data JSON Anda dengan mudah",
     link: "/tools/json",
     status: "Available"
   },
   {
-    icon: "🎨",
+    icon: <Palette className="w-7 h-7" />,
     title: "Color Palette",
     description: "Buat kombinasi warna yang menarik untuk proyek Anda",
     link: "/tools/color-palette",
     status: "Available"
   },
   {
-    icon: "📝",
+    icon: <FileText className="w-7 h-7" />,
     title: "Markdown Editor",
     description: "Edit dan preview markdown dengan fitur real-time",
     link: "/tools/markdown",
     status: "Available"
   },
   {
-    icon: "🔄",
+    icon: <Repeat2 className="w-7 h-7" />,
     title: "Format Converter",
     description: "Konversi berbagai format data dengan mudah",
     link: "/tools/converter",
     status: "Available"
   },
   {
-    icon: "💻",
+    icon: <Code2 className="w-7 h-7" />,
     title: "Code Generator",
     description: "Generate kode boilerplate untuk berbagai framework",
     link: "/tools/code-generator",
     status: "Available"
   },
   {
-    icon: "🔍",
+    icon: <Regex className="w-7 h-7" />,
     title: "Regex Tester",
     description: "Uji dan validasi ekspresi reguler Anda",
     link: "/tools/regex",

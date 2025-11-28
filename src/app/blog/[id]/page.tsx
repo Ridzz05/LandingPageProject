@@ -1,6 +1,5 @@
 'use client';
 
-// Tambahkan konfigurasi runtime edge
 export const runtime = 'edge';
 
 import { motion } from 'framer-motion';

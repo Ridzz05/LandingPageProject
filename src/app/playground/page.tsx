@@ -5,6 +5,7 @@ import PageTemplate from '../components/PageTemplate';
 import { PlaygroundHeader } from './components/PlaygroundHeader';
 import { StreamingServices } from './components/StreamingServices';
 import { FeaturedStream } from './components/FeaturedStream';
+import { Gamepad2, Clapperboard, Podcast, Smartphone } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -63,22 +64,22 @@ export default function PlaygroundPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  icon: "🎮",
+                  icon: <Gamepad2 className="w-8 h-8" />,
                   title: "Game Streaming",
                   description: "Streaming game favorit Anda"
                 },
                 {
-                  icon: "🎥",
+                  icon: <Clapperboard className="w-8 h-8" />,
                   title: "Movie Streaming",
                   description: "Nonton film dan serial terbaru"
                 },
                 {
-                  icon: "🎙️",
+                  icon: <Podcast className="w-8 h-8" />,
                   title: "Podcast",
                   description: "Dengarkan podcast terbaik"
                 },
                 {
-                  icon: "📱",
+                  icon: <Smartphone className="w-8 h-8" />,
                   title: "Mobile App",
                   description: "Akses dari perangkat mobile"
                 }
@@ -90,7 +91,9 @@ export default function PlaygroundPage() {
                   transition={{ delay: 0.8 + index * 0.1 }}
                   className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
                 >
-                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#442781]/10 text-[#442781] dark:bg-[#442781]/15 dark:text-[#a992db] mb-4 mx-auto">
+                    {feature.icon}
+                  </div>
                   <h3 className="font-raleway font-semibold text-gray-800 dark:text-white mb-2">
                     {feature.title}
                   </h3>

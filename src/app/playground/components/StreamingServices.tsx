@@ -4,26 +4,27 @@ import { motion } from 'framer-motion';
 import Card from '../../components/Card';
 import Button from '../../components/Button';
 import Icon from '../../components/Icon';
+import { Tv, Radio, Music2 } from 'lucide-react';
 
 const services = [
   {
     title: "Live TV",
     description: "Watch your favorite TV channels live",
-    emoji: "📺",
+    icon: <Tv className="w-12 h-12" />,
     link: "/playground/tv",
     status: "Available"
   },
   {
     title: "Radio",
     description: "Listen to worldwide radio stations",
-    emoji: "📻",
+    icon: <Radio className="w-12 h-12" />,
     link: "/playground/radio",
     status: "Available"
   },
   {
     title: "Music",
     description: "Stream the latest music and shows",
-    emoji: "🎵",
+    icon: <Music2 className="w-12 h-12" />,
     link: "/playground/music",
     status: "Available"
   }
@@ -67,7 +68,9 @@ export function StreamingServices() {
         >
           <Card className="group hover:shadow-lg transition-all">
             <div className="relative h-48 mb-6 rounded-lg overflow-hidden bg-gradient-to-br from-[#442781]/10 to-[#61459C]/10 dark:from-[#442781]/20 dark:to-[#61459C]/20 flex items-center justify-center">
-              <span className="text-7xl">{service.emoji}</span>
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/80 dark:bg-gray-900/70 text-[#442781] dark:text-[#a992db] shadow-sm">
+                {service.icon}
+              </div>
             </div>
             <h2 className="font-raleway font-bold text-xl text-gray-800 dark:text-white mb-2">
               {service.title}

@@ -5,6 +5,7 @@ import Card from '../../components/Card';
 import Button from '../../components/Button';
 import Icon from '../../components/Icon';
 import Heading from '../../components/Heading';
+import { Radio } from 'lucide-react';
 
 export function FeaturedStream() {
   return (
@@ -15,11 +16,11 @@ export function FeaturedStream() {
       transition={{ delay: 0.6, duration: 0.6 }}
     >
       <Card className="bg-gradient-to-br from-[#442781]/10 to-[#61459C]/10 dark:from-[#442781]/20 dark:to-[#61459C]/20">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-1">
-            <Heading level={2} className="mb-4">
-              Featured: Live Radio
-            </Heading>
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-1">
+              <Heading level={2} className="mb-4">
+                Featured: Live Radio
+              </Heading>
             <p className="font-rubik text-gray-600 dark:text-gray-300 mb-6">
               Listen to your favorite radio stations from around the world with our advanced streaming player.
             </p>
@@ -33,7 +34,7 @@ export function FeaturedStream() {
             </Button>
           </div>
           <div className="w-full md:w-1/3 aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[#442781] to-[#61459C] flex items-center justify-center text-6xl">
-            📻
+            <Radio className="w-16 h-16 text-white" />
           </div>
         </div>
       </Card>

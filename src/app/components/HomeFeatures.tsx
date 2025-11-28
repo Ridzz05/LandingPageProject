@@ -4,22 +4,23 @@ import { motion } from 'framer-motion';
 import Card from './Card';
 import Button from './Button';
 import Icon from './Icon';
+import { Code2, MonitorPlay, FileText } from 'lucide-react';
 
 const features = [
   {
-    icon: "⚡",
+    icon: <Code2 className="w-8 h-8" />,
     title: "Developer Tools",
     description: "Powerful tools to streamline your development workflow",
     link: "/tools"
   },
   {
-    icon: "📺",
+    icon: <MonitorPlay className="w-8 h-8" />,
     title: "Streaming Platform",
     description: "Watch your favorite content with our streaming services",
     link: "/playground"
   },
   {
-    icon: "📝",
+    icon: <FileText className="w-8 h-8" />,
     title: "Technical Blog",
     description: "Stay updated with the latest in tech and development",
     link: "/blog"
@@ -64,7 +65,9 @@ export function HomeFeatures() {
             variants={cardVariants}
           >
             <Card className="group hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">{feature.icon}</div>
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#442781]/10 text-[#442781] dark:bg-[#442781]/15 dark:text-[#a992db] mb-4">
+                {feature.icon}
+              </div>
               <h2 className="font-raleway font-bold text-xl text-gray-800 dark:text-white mb-4">
                 {feature.title}
               </h2>

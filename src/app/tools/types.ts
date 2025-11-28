@@ -1,7 +1,9 @@
+import type { ReactNode } from 'react';
+
 export interface Tool {
-  icon: string;
+  icon: ReactNode;
   title: string;
   description: string;
   link: string;
   status: "Available" | "Coming Soon";
-} 
+}
